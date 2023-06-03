@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budgeting App</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="./app.js"></script>   
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="sub-container">
+        <div class="total-amount-container">
+          <h3>Budget</h3>
+          <input type="number" id="total-amount" placeholder="Enter Total Amount" />
+          <button class="submit" id="total-amount-button">Set Budget</button>
+        </div>
+        <div class="user-amount-container">
+          <h3>Expenses</h3>
+          <label for="date-due">Due Date*</label>
+          <input type="date" class="date-due" id="date-due" required>
+          <label for="user-amount">Total Amount*</label>
+          <input type="number" id="user-amount" placeholder="$" />
+          <label for="select">Category</label><br>
+          <select name="select" id="Category">
+            <option value="" disabled selected>Cost of services provided</option>
+            <option value="self">Self</option>
+            <option value="loan-friend">Loan by friend</option>
+            <option value="loan-bank">Loan by bank</option>
+          </select><br>
+          <label for="product-title">Description*</label>
+          <input required type="text" class="product-title" id="product-title" />
+          <label for="payment-date">Payment Date*</label>
+          <input type="date" class="payment-date" id="payment-date" required>
+          <button class="submit" id="check-amount">Add</button>
+        </div>
+      </div>
+      <div class="output-container flex-space">
+        <div>
+          <p>Total Budget</p>
+          <span id="amount">0</span>
+        </div>
+        <div>
+          <p>Expenses</p>
+          <span id="expenditure-value">0</span>
+        </div>
+        <div>
+          <p>Balance</p>
+          <span id="balance-amount">0</span>
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <h3>Expense List</h3>
+      <div class="list-container" id="list"></div>
+    </div>
+  </div>
+</body>
+</html>
